@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Actividad extends Model
 {
-    protected $guarded = [];
+    protected $fillable = ['nombre', 'descripcion', 'dia_semana', 'horario'];
 
     public function alumnos()
     {

@@ -4,13 +4,18 @@
 <div class="container py-5">
     <h1 class="mb-4">Listado de Actividades</h1>
 
+     <div class="mb-3">
+        <a href="{{ route('actividades.create') }}" class="btn btn-primary">Crear actividad</a>
+    </div>
+
     <table class="table table-bordered table-striped">
         <thead class="table-dark">
             <tr>
                 <th>ID</th>
                 <th>Nombre</th>
-                <th>Curso</th>
-                <th>Edad</th>
+                <th>Descripción</th>
+                <th>Día de la Semana</th>
+                <th>Horario</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -19,10 +24,11 @@
                 <tr>
                     <td>{{ $actividad->id }}</td>
                     <td>{{ $actividad->nombre }}</td>
-                    <td>{{ $actividad->curso }}</td>
-                    <td>{{ $actividad->edad }}</td>
+                    <td>{{ $actividad->descripcion }}</td>
+                    <td>{{ empty($actividad->dia_semana) ? 'Sin definir' : $actividad->dia_semana }}</td>
+                    <td>{{ $actividad->horario }}</td>
                     <td class="d-flex gap-2">
-                        <a href="{{ route('actividades.edit', $actividad->id) }}" class="btn btn-sm btn-warning">Editar</a>
+                        <a href="{{ route('actividades.edit',['actividade'=>$actividad->id]) }}" class="btn btn-sm btn-warning">Editar</a>
 
                         <form action="{{ route('actividades.destroy', $actividad->id) }}" method="POST">
                             @csrf
@@ -35,7 +41,7 @@
                 </tr>
             @empty
                 <tr>
-                    <td colspan="5" class="text-center">No hay actividades registradas.</td>
+                    <td colspan="6" class="text-center">No hay actividades registradas.</td>
                 </tr>
             @endforelse
         </tbody>

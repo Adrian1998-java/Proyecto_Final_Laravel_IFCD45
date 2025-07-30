@@ -4,6 +4,10 @@
 <div class="container py-4">
     <h2 class="mb-4">Lista de Alumnos</h2>
 
+    <div class="mb-3">
+        <a href="{{ route('alumnos.create') }}" class="btn btn-primary">Añadir Alumno</a>
+    </div>
+
     <table class="table table-bordered table-striped">
         <thead class="table-dark">
             <tr>

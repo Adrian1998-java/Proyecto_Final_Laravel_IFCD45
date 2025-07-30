@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Alumno;
+use App\Http\Requests\AlumnoRequest;
+
 
 class AlumnoController extends Controller
 {
@@ -21,15 +23,16 @@ class AlumnoController extends Controller
      */
     public function create()
     {
-        //
+        return view('alumnos.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(AlumnoRequest $request)
     {
-        //
+        Alumno::create($request->all());
+        return redirect()->route('alumnos.index');
     }
 
     /**
@@ -45,15 +48,18 @@ class AlumnoController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $alumno = Alumno::find($id);
+        return view('alumnos.edit', compact('alumno'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(AlumnoRequest $request, string $id)
     {
-        //
+        $alumno = Alumno::find($id);
+        $alumno->update($request->all());
+        return redirect()->route('alumnos.index');
     }
 
     /**
@@ -61,6 +67,8 @@ class AlumnoController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $alumno = Alumno::find($id);
+        $alumno->delete();
+        return redirect()->route('alumnos.index');
     }
 }
