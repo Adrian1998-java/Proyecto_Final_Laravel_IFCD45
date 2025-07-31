@@ -26,6 +26,16 @@
                 </div>
             </div>
         </div>
+        <!-- Card Inscripciones -->
+        <div class="col-md-5 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Inscripciones</h5>
+                    <p class="card-text">Maneja todas las inscripciones entre alumnos y actividades.</p>
+                    <a href="{{ route('inscripciones.index') }}" class="btn btn-success mt-auto">Ir a Inscripciones</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 @endsection

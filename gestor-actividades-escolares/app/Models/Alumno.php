@@ -11,6 +11,6 @@ class Alumno extends Model
 
     public function actividades()
     {
-        return $this->belongsToMany(Actividad::class);
+        return $this->belongsToMany(Actividad::class, 'inscripcions');
     }
 }

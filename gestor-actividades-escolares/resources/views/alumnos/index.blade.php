@@ -15,6 +15,7 @@
                 <th>Nombre</th>
                 <th>Curso</th>
                 <th>Edad</th>
+                <th>Actividades inscritas</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -25,6 +26,17 @@
                     <td>{{ $alumno->nombre }}</td>
                     <td>{{ $alumno->curso }}</td>
                     <td>{{ $alumno->edad }}</td>
+                    <td>
+                        @if($alumno->actividades->count())
+                            <ul class="mb-0">
+                                @foreach ($alumno->actividades as $actividad)
+                                    <li>{{ $actividad->nombre }}</li>
+                                @endforeach
+                            </ul>
+                        @else
+                            <em>Sin inscripciones</em>
+                        @endif
+                    </td>
                     <td>
                         <a href="{{ route('alumnos.edit', $alumno->id) }}" class="btn btn-sm btn-warning me-2">Editar</a>
 

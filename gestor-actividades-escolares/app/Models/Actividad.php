@@ -10,6 +10,6 @@ class Actividad extends Model
 
     public function alumnos()
     {
-        return $this->belongsToMany(Alumno::class);
+        return $this->belongsToMany(Alumno::class, 'inscripcions');
     }
 }
