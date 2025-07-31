@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Alumno;
 use App\Http\Requests\AlumnoRequest;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 
 class AlumnoController extends Controller
@@ -70,5 +71,17 @@ class AlumnoController extends Controller
         $alumno = Alumno::find($id);
         $alumno->delete();
         return redirect()->route('alumnos.index');
+    }
+
+        /**
+     * Método para generar un PDF.
+     */
+
+    public function generarActividadPDF()
+    {
+        $alumnos = Alumno::all();
+
+        $pdf = Pdf::loadView('pdf.alumno', compact('alumnos'));
+        return $pdf->download('alumnos.pdf');
     }
 }

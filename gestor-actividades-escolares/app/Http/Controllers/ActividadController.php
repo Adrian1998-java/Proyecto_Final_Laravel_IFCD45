@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Actividad;
 use App\Http\Requests\ActividadRequest;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class ActividadController extends Controller
 {
@@ -71,4 +72,18 @@ class ActividadController extends Controller
         $actividad->delete();
         return redirect()->route('actividades.index');
     }
+    
+    
+    /**
+     * Método para generar un PDF.
+     */
+
+    public function generarActividadPDF()
+    {
+        $actividades = Actividad::all();
+
+        $pdf = Pdf::loadView('pdf.actividad', compact('actividades'));
+        return $pdf->download('actividades.pdf');
+    }
+
 }

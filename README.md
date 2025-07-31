@@ -37,6 +37,10 @@ También se pueden exportar listados y realizar búsquedas básicas.
 6. Mejores prácticas para el desarrollo de aplicaciones web reales.
 
 ---
+## Descargar PDFs de las tablas
+
+Se pueden descargar los PDFs de las tablas tanto de actividades como de alumnos. Se debe poner, correspondientemente, las rutas `/pdf/actividades` y `/pdf/alumnos` en el navegador. Eso descargará el PDF correspondiente.
+
 
 ## Instrucciones de instalación
 
@@ -47,3 +51,4 @@ Sigue estos pasos para clonar y ejecutar el proyecto en tu entorno local:
 ```bash
 git clone https://github.com/tu-usuario/Proyecto_Final_Laravel_IFCD45.git
 cd Proyecto_Final_Laravel_IFCD45
+
