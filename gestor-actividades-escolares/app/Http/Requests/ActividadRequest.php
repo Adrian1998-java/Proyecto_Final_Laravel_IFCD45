@@ -31,4 +31,20 @@ class ActividadRequest extends FormRequest
             ],
         ];
     }
+
+    public function messages() 
+    {
+        return [
+            'nombre.required' => 'El nombre de la actividad es requerido',
+            'nombre.max' => 'El nombre de la actividad no puede tener más de 255 caracteres',
+            'nombre.min' => 'El nombre de la actividad debe tener al menos 3 caracteres',
+            'descripcion.required' => 'La descripción de la actividad es requerida',
+            'descripcion.max' => 'La descripción de la actividad no puede tener más de 255 caracteres',
+            'descripcion.min' => 'La descripción de la actividad debe tener al menos 3 caracteres ',
+            'dia_semana.required' => 'El día de la semana es requerido',
+            'dia_semana.in' => 'El día de la semana no es válido',
+            'horario.required' => 'El horario de la actividad es requerido',
+            'horario.regex' => 'El horario de la actividad no es válido',
+        ];
+    }
 }
