@@ -14,7 +14,7 @@ class ActividadController extends Controller
      */
     public function index()
     {
-        $actividades = Actividad::all();
+        $actividades = Actividad::paginate(5);
         return view('actividades.index', compact('actividades'));
     }
 

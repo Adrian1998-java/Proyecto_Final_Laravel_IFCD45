@@ -17,11 +17,11 @@ También se pueden exportar listados y realizar búsquedas básicas.
 
 ### 📷 Ejemplo de la vista de actividades:
 
-![Vista de actividades](./READMEUtils/img/imagen_2.png)
+![Vista de actividades](./READMEUtils/img/imagen_3.png)
 
 ### 📷 Ejemplo de la vista de alumnos:
 
-![Vista de inscripciones](./READMEUtils/img/imagen_3.png)
+![Vista de inscripciones](./READMEUtils/img/imagen_2.png)
 
 ### 📷 Ejemplo de la vista de inscripciones:
 

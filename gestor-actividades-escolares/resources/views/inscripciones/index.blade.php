@@ -41,6 +41,9 @@
                             @endforelse
                         </tbody>
                     </table>
+                    <div class="d-flex justify-content-center">
+                        {{ $inscripciones->links() }}
+                    </div>
 
                 </div>
             </div>

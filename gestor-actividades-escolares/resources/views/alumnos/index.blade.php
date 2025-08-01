@@ -54,6 +54,9 @@
             @endforelse
         </tbody>
     </table>
+    <div class="d-flex justify-content-center">
+        {{ $alumnos->links() }}
+    </div>
 
     <a href="{{ route('index') }}" class="btn btn-secondary mt-3">Volver al inicio</a>
 </div>
