@@ -27,7 +27,6 @@
                                     <td>{{ $inscripcion->alumno->nombre }}</td>
                                     <td>{{ $inscripcion->actividad->nombre }}</td>
                                     <td class="text-center">
-                                        <a href="{{ route('inscripciones.edit', $inscripcion->id) }}" class="btn btn-sm btn-warning">Editar</a>
                                         <form action="{{ route('inscripciones.destroy', $inscripcion->id) }}" method="POST" class="d-inline">
                                             @csrf
                                             @method('DELETE')

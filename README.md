@@ -6,6 +6,7 @@ Este proyecto final consiste en desarrollar una aplicación web con Laravel que 
 El sistema incluye funcionalidades básicas: registro de actividades, alumnos e inscripciones, así como el uso de vistas Blade, controladores, rutas RESTful, validaciones y exportación de listados.  
 A través de este proyecto pondrás en práctica los conocimientos adquiridos durante el curso en PHP, POO, MVC, Laravel y acceso a base de datos con Eloquent ORM. También te prepararás para desarrollar proyectos reales y defender tu trabajo técnico de manera profesional.
 
+![Vista principal](./READMEUtils/img/imagen_1.png)
 ---
 
 ## ¿Qué hace?
@@ -13,6 +14,18 @@ A través de este proyecto pondrás en práctica los conocimientos adquiridos du
 Este proyecto simula un **gestor de alumnos y actividades extraescolares**.  
 Permite crear, listar, editar y eliminar **actividades** (como robótica o ajedrez) y **alumnos**. Además, establece relaciones entre ambos a través de una tabla intermedia llamada **Inscripciones**, que gestiona qué alumno está inscrito a qué actividad.  
 También se pueden exportar listados y realizar búsquedas básicas.
+
+### 📷 Ejemplo de la vista de actividades:
+
+![Vista de actividades](./READMEUtils/img/imagen_2.png)
+
+### 📷 Ejemplo de la vista de alumnos:
+
+![Vista de inscripciones](./READMEUtils/img/imagen_3.png)
+
+### 📷 Ejemplo de la vista de inscripciones:
+
+![Vista de inscripciones](./READMEUtils/img/imagen_4.png)
 
 ---
 
@@ -37,10 +50,6 @@ También se pueden exportar listados y realizar búsquedas básicas.
 6. Mejores prácticas para el desarrollo de aplicaciones web reales.
 
 ---
-## Descargar PDFs de las tablas
-
-Se pueden descargar los PDFs de las tablas tanto de actividades como de alumnos. Se debe poner, correspondientemente, las rutas `/pdf/actividades` y `/pdf/alumnos` en el navegador. Eso descargará el PDF correspondiente.
-
 
 ## Instrucciones de instalación
 
@@ -51,4 +60,3 @@ Sigue estos pasos para clonar y ejecutar el proyecto en tu entorno local:
 ```bash
 git clone https://github.com/tu-usuario/Proyecto_Final_Laravel_IFCD45.git
 cd Proyecto_Final_Laravel_IFCD45
-
