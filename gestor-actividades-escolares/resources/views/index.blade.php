@@ -2,7 +2,13 @@
 
 @section('content')
 <div class="container py-5">
-    <h1 class="text-center mb-5">Gestor de Actividades Escolares</h1>
+    <h1 class="text-center mb-4">Gestor de Actividades Escolares</h1>
+
+    {{-- Botones para exportar PDFs --}}
+    <div class="text-center mb-5">
+        <a href="{{ url('pdf/alumnos') }}" class="btn btn-outline-dark me-2">Exportar Alumnos en PDF</a>
+        <a href="{{ url('pdf/actividades') }}" class="btn btn-outline-dark">Exportar Actividades en PDF</a>
+    </div>
 
     <div class="row justify-content-center">
         <!-- Card Alumnos -->
@@ -26,6 +32,7 @@
                 </div>
             </div>
         </div>
+
         <!-- Card Inscripciones -->
         <div class="col-md-5 col-lg-4 mb-4">
             <div class="card h-100 shadow-sm">
